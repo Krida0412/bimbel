@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   description:
     "Kitabisa adalah platform modern untuk layanan bimbingan belajar terpercaya. Didesain untuk memberikan pengalaman belajar yang nyaman dan hasil maksimal.",
   icons: [{ rel: "icon", url: favicon.src }],
-  metadataBase: new URL("https://bimbel-terpercaya.com/"), // Ganti dengan domain Anda
+  metadataBase: new URL("https://bimbel-terpercaya.com/"), 
   openGraph: {
     title: "Kitabisa | Bimbel Terpercaya",
     siteName: "Kitabisa | Bimbel Terpercaya",
     description:
       "Kitabisa adalah platform modern untuk layanan bimbingan belajar terpercaya. Didesain untuk memberikan pengalaman belajar yang nyaman dan hasil maksimal.",
-    url: "https://bimbel-terpercaya.com/", // Ganti dengan domain Anda
+    url: "https://bimbel-terpercaya.com/", 
     type: "website",
-    locale: "id_ID", // Mengubah ke lokal Indonesia
+    locale: "id_ID",
     images: [
       {
         url: SummaryLargeImage.src,
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Kitabisa | Bimbel Terpercaya",
-    creator: "@akunTwitterAnda", // Ganti dengan akun Twitter Anda
-    site: "@akunTwitterAnda", // Ganti dengan akun Twitter Anda
+    creator: "@akunTwitterAnda", 
+    site: "@akunTwitterAnda", 
     description:
       "Kitabisa adalah platform modern untuk layanan bimbingan belajar terpercaya. Didesain untuk memberikan pengalaman belajar yang nyaman dan hasil maksimal.",
     card: "summary_large_image",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://bimbel-terpercaya.com/", // Ganti dengan domain Anda
+    canonical: "https://bimbel-terpercaya.com/", 
   },
 };
 
@@ -73,8 +73,6 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="id"> {/* Ganti bahasa ke 'id' */}
       <body>
         <Providers>
-          <Cookie />
-          <Banner />
           <Navbar />
           {children}
           <Footer />

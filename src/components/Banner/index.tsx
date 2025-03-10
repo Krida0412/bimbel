@@ -34,7 +34,7 @@ const Banner = () => {
         }}
         color={StargateColors.white}
       >
-        Register and get 20% discount on checkout
+        Butuh Webiste?
       </Text>
       <Icon
         as={LuX}

@@ -12,8 +12,8 @@ import { LuCheck } from 'react-icons/lu';
 const Pricing = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi AOS
-      once: false, // Animasi akan berjalan setiap kali elemen terlihat
+      duration: 1000, 
+      once: false,
     });
   }, []);
   const [currentBilling, setCurrentBilling] = useState('sd'); // Default "sd"
@@ -189,12 +189,12 @@ const Pricing = () => {
         mt={6}
         justify={currentBilling === 'umum' ? 'center' : 'space-between'} // Atur justify
       >
-        <AnimatePresence initial={false}>
+        <AnimatePresence mode="wait">
           {(currentBilling === 'umum'
             ? plans.filter(
                 (plan) =>
                   plan.name === 'Mengaji' || plan.name === 'Bahasa Arab',
-              ) // Filter program "umum"
+              ) 
             : plans
           ).map((plan) => (
             <Flex
@@ -206,12 +206,12 @@ const Pricing = () => {
               border={`1px solid ${StargateColors.lightBg}`}
               borderRadius={18}
               color={StargateColors.black}
-              initial={{ opacity: 0.2 }}
+              initial={{ opacity: 0.1 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0.2 }}
+              exit={{ opacity: 0, y: -80, scale: 0.95 }}
               transition={'all 0.25s ease'}
               _hover={{
-                transform: { base: 'none', md: 'scale(1.02)' }, // Hover hanya di desktop
+                transform: { base: 'none', md: 'scale(1.02)' }, 
                 transition: 'transform 0.3s ease-in-out',
                 boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
               }}
